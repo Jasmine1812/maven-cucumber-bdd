@@ -10,5 +10,5 @@ public class GlobalConstants {
     public static final String UPLOAD_PATH = RELATIVE_PROJECT_PATH + File.separator +  "uploadFiles" + File.separator;
     public static final String RESOURCE_PATH = RELATIVE_PROJECT_PATH + File.separator +  "resources" + File.separator;
     public static final long SHORT_TIMEOUT = 5;
-    public static final String URL = "http://localhost:90//orangehrm5";
+    public static final String URL = "http://localhost:80//orangehrm5";
 }

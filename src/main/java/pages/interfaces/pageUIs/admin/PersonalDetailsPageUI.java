@@ -18,4 +18,5 @@ public class PersonalDetailsPageUI {
     public static final String MARITAL_STATUS_PARENT = "xpath=//label[text()='Marital Status']/parent::div/following-sibling::div//i";
     public static final String MARITAL_STATUS_SELECT = "xpath=//label[text()='Marital Status']/parent::div/following-sibling::div//div[@class='oxd-select-text-input']";
     public static final String SAVE_BUTTON = "xpath=//button[@type='submit']";
+
 }

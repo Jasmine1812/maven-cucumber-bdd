@@ -27,4 +27,7 @@ public class PageGenerator {
     public static EmergencyContactPageObject getEmergencyContactPage(WebDriver driver){
         return new EmergencyContactPageObject(driver);
     }
+    public static CommonPageObject getCommonPage(WebDriver driver){
+        return new CommonPageObject(driver);
+    }
 }

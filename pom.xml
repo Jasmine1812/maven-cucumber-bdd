@@ -45,7 +45,7 @@
             <version>${webdriver.version}</version>
         </dependency>
 
-           <dependency>
+        <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
             <version>${jackson.version}</version>
@@ -225,7 +225,7 @@
                 <version>3.1.2</version>
                 <configuration>
                     <includes>
-                        <include>**/*/CucumberTestRunner.java</include>
+                        <include>**/*/LoginRunner.java</include>
                     </includes>
 
                 </configuration>
@@ -243,15 +243,13 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>MyProjectName
-                            </projectName>
-                            <outputDirectory>
-                                target/cucumber-reports/advanced-reports
-                            </outputDirectory>
-                            <cucumberOutput>
-                                target/cucumber-reports/CucumberTestReport.json
-                            </cucumberOutput>
-                            <parallelTesting>false</parallelTesting>
+                            <projectName>cucumber-report</projectName>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <inputDirectory>${project.build.directory}</inputDirectory>
+                            <jsonFiles>
+                                <param>**/*.json</param>
+                            </jsonFiles>
+                            <checkBuildResult>false</checkBuildResult>
                         </configuration>
                     </execution>
                 </executions>
