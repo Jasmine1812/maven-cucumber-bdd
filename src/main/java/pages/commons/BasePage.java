@@ -126,6 +126,19 @@ public class BasePage {
 
     }
 
+    public void selectItemInCustomDropdown(String parentLocator, String childItemLocator, String expectedItem, String... restParams) {
+        getElement(getDynamicLocator(parentLocator,restParams)).click();
+        List<WebElement> allItems = new WebDriverWait(driver, Duration.ofSeconds(longTimeout)).
+                until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByLocator(getDynamicLocator(childItemLocator,restParams))));
+        for (WebElement item : allItems) {
+            if (item.getText().trim().equals(expectedItem)) {
+                item.click();
+                break;
+            }
+        }
+
+    }
+
     public void waitForElementVisible(String locator) {
         new WebDriverWait(driver, Duration.ofSeconds(longTimeout)).until(ExpectedConditions.visibilityOfElementLocated(getByLocator(locator)));
     }

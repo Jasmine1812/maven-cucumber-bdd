@@ -54,6 +54,12 @@ public class LoginStep {
             throw new RuntimeException(e);
         }
     }
+    @Given("User login to OrangeHRM page")
+    public void userLoginToOrangeHRMPage() {
+        loginPage.enterToUserNameTextBox("Admin");
+        loginPage.enterToPasswordTextBox("Admin@admin123");
+        homepage = loginPage.clickToLoginButton();
+    }
 
 
 }

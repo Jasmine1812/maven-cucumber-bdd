@@ -16,8 +16,12 @@ public class EmployeeStep {
     private LoginPageObject loginPage;
     private DashboardPageObject homepage;
     private String loginPageUrl;
+
     @Given("User login to OrangeHRM page")
-    public void getUrlLoginPageOrangehrm() {
-        loginPageUrl = loginPage.getLoginpageUrl();
+    public void userLoginToOrangeHRMPage() {
+        loginPage.enterToUserNameTextBox("Admin");
+        loginPage.enterToPasswordTextBox("Admin@admin123");
+        homepage = loginPage.clickToLoginButton();
     }
+
 }

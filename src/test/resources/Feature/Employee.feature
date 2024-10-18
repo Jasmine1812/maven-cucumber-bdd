@@ -3,8 +3,8 @@ Feature: Employee
   Scenario: Update Personal Details
     Given User login to OrangeHRM page
     When User open Personal Details by edit icon
-    And User enter to first name textbox with value ""
-    And User enter to street1 textbox with value ""
+    And User enter to "" textbox with value ""
+    And User wait 10000s
 #  personalDetailsPage.enterToOtherIdTextbox(otherId);
 #  personalDetailsPage.enterToDriversLicenseNumberTextbox(driversLicenseNumber);
 #  personalDetailsPage.enterTolicenseExpiryDateDatePicker(licenseExpiryDate);
