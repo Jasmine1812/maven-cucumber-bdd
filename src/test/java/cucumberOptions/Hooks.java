@@ -1,5 +1,6 @@
 package cucumberOptions;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import io.cucumber.java.Before;
@@ -64,8 +65,8 @@ public class Hooks {
             }
 
             driver.get(GlobalConstants.URL);
-            driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         }
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         return driver;
     }
 

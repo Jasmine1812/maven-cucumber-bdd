@@ -11,7 +11,7 @@ public class CommonPageUI {
     public static final String DYAMIC_LEFT_MENU_PIM_BY_TEXT = "xpath=//div[@class='orangehrm-tabs-wrapper']//a[text()='%s']";
     public static final String DYNAMIC_WARNING_MESSAGE = "xpath=//div[contains(@class,'oxd-toast-content--info')]/p[text()='%s']";
     public static final String TEXTBOX_DYNAMIC_BY_NAME = "xpath=//input[@name='%s']";
-    public static final String TEXTBOX_DYNAMIC_BY_LABEL = "xpath=//label[text()='%s']/parent::div//following-sibling::div/input";
+    public static final String TEXTBOX_DYNAMIC_BY_LABEL = "xpath=//label[contains(text(),'%s')]/parent::div//following-sibling::div/input";
     public static final String DATE_DYNAMIC_BY_LABEL = "xpath=//label[text()='%s']/parent::div/following-sibling::div//input";
     public static final String DROPDOWN_PARENT_DYNAMIC_BY_LABEL = "xpath=//label[text()='%s']/parent::div/following-sibling::div//i";
     public static final String DROPDOWN_CHILD_DYNAMIC_BY_LABEL = "xpath=//label[text()='%s']/parent::div/following-sibling::div//span";
